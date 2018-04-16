@@ -5,7 +5,7 @@ import App from './App'
 import router from './router'
 
 // 引用API文件
-import api from './api/index.js'
+import api from './api/index'
 // 将API方法绑定到全局
 Vue.prototype.$api = api
 
