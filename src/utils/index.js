@@ -1,4 +1,5 @@
 export default {
+  // 时间格式化
   goodTime (str) {
     let now = new Date().getTime()
     let oldTime = new Date(str).getTime()
