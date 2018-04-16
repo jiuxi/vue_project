@@ -11,7 +11,7 @@
         </li>
       </ul>
     </div>
-    <Footer></Footer>
+    <myFooter></myFooter>
   </div>
 </template>
 
