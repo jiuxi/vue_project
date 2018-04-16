@@ -1,10 +1,10 @@
 <template>
   <div>
-    <Header></Header>
+    <myHeader></myHeader>
     <div class="article_list">
       <ul>
-        <li v-for="i in list">
-          <time v-text="i.create_at"></time>
+        <li v-for="i in list" :key="i.id">
+          <time v-text="$utils.goodTime(i.create_at)"></time>
           <router-link :to="'/content/' + i.id">
             {{ i.title }}
           </router-link>
@@ -16,11 +16,11 @@
 </template>
 
 <script>
-import Header from '../components/pubHeader'
-import Footer from '../components/pubFooter'
+import myHeader from '../components/pubHeader'
+import myFooter from '../components/pubFooter'
 
 export default {
-  components: {Header, Footer},
+  components: {myHeader, myFooter},
   data () {
     return {
       list: []
