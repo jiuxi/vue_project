@@ -4,7 +4,11 @@
 
 <script>
 export default {
-  name: ''
+  created () {
+    this.$api.get('topics', null, r => {
+      console.log(r)
+    })
+  }
 }
 </script>
 
