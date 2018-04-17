@@ -1,12 +1,22 @@
 <template>
   <div>
-    <h1>Header</h1>
+    <h1>The number is:{{$store.state.count}}</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: ''
+  name: '',
+  computed: {
+    num () {
+      return this.$store.state.count
+    }
+  },
+  watch: {
+    num (val) {
+      console.log(val)
+    }
+  }
 }
 </script>
 

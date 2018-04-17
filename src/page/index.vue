@@ -1,6 +1,9 @@
 <template>
   <div>
     <myHeader></myHeader>
+    <hr/>
+    <button @click="$store.commit('add')">+</button>
+    <button @click="$store.commit('reduce')">-</button>
     <div class="article_list">
       <ul>
         <li v-for="i in list" :key="i.id">
@@ -40,5 +43,7 @@ export default {
 </script>
 
 <style scoped>
-  .article_list {margin: auto;}
+  .article_list {
+    margin: auto;
+  }
 </style>
