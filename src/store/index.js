@@ -1,20 +1,12 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
+import numStore from '../store/modules/num_store.js'
+
 Vue.use(Vuex)
 
-const store = new Vuex.Store({
-  state: {
-    count: 0
-  },
-  mutations: {
-    add (state) {
-      state.count += 1
-    },
-    reduce (state) {
-      state.count -= 1
-    }
+export default new Vuex.Store({
+  modules: {
+    num: numStore
   }
 })
-
-export default store

@@ -2,8 +2,8 @@
   <div>
     <myHeader></myHeader>
     <hr/>
-    <button @click="$store.commit('add')">+</button>
-    <button @click="$store.commit('reduce')">-</button>
+    <button @click="$store.dispatch('add')">+</button>
+    <button @click="$store.dispatch('reduce')">-</button>
     <div class="article_list">
       <ul>
         <li v-for="i in list" :key="i.id">
@@ -23,7 +23,7 @@ import myHeader from '../components/pubHeader'
 import myFooter from '../components/pubFooter'
 
 export default {
-  components: {myHeader, myFooter},
+  components: { myHeader, myFooter },
   data () {
     return {
       list: []
@@ -43,7 +43,7 @@ export default {
 </script>
 
 <style scoped>
-  .article_list {
-    margin: auto;
-  }
+.article_list {
+  margin: auto;
+}
 </style>

@@ -1,8 +1,8 @@
 <template>
   <div>
     <myHeader></myHeader>
-    <button @click="$store.commit('add')">+</button>
-    <button @click="$store.commit('reduce')">-</button>
+    <button @click="$store.dispatch('add')">+</button>
+    <button @click="$store.dispatch('reduce')">-</button>
     <h2 v-text="dat.title"></h2>
     <p v-if="dat">作者：{{dat.author.loginname}}&nbsp;&nbsp;&nbsp;&nbsp;发表于：{{$utils.goodTime(dat.create_at)}}</p>
     <hr>
